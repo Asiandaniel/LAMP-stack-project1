@@ -88,7 +88,45 @@ MySQL is essential in a LAMP stack for handling all database-related tasks, maki
 6. ![image](https://github.com/user-attachments/assets/64d6cb60-51bd-47a8-b4b0-b08ebacff583)
 
 7. i  Assigned a password to the root user using the mysql_native_password as the default authetication method. The password i assigned to the user for the purpose of this documentation is "DanielSage"
-8. ![Uploading image.png…]()
+8. ![image](https://github.com/user-attachments/assets/d10c625a-26a4-47e8-8099-9cc4a13b53a6)
+9. 
+i exited mysql
+` exit `
 
-9. ![Uploading image.png…]()
+5. # Run the script to secure MySQL
 
+6. This security script is included with MySQL by default. It assists in eliminating certain insecure default configurations and restricts access to the database system.
+7. ` sudo mysql_secure_installation `
+8. ![image](https://github.com/user-attachments/assets/f3dd4c9f-18b4-4ef8-be9d-3af0b4f7fccb)
+
+# Step 3 -  Install PHP  
+1. Now, we'll install PHP. So far, we've set up Apache to serve web content and MySQL to manage and store data. Next, we'll install PHP to process code and deliver dynamic content to users.
+
+To configure PHP on our server, we'll need to install the following:
+
+- The PHP package
+- `php-mysql` (a PHP module that allows PHP to interact with MySQL databases)
+- `libapache2-mod-php` (enables Apache to process and interpret PHP files)
+
+To install all of these components, run the following command.
+
+` sudo apt install php libapache2-mod-php php-mysql `
+
+![image](https://github.com/user-attachments/assets/767dee86-7ffe-401c-a234-b08765075999)
+
+i Confirmed the PHP version by running this command 
+`php -v`
+![image](https://github.com/user-attachments/assets/fb2a6884-6482-4e98-b263-dd20ee241117)
+At this stage, we have fully installed and configured the LAMP stack (Linux, Apache, MySQL, PHP).
+
+To verify the setup, we need to configure an Apache Virtual Host to store the website's files and directories. Virtual Hosts allow multiple websites to be hosted on a single machine, while keeping this hidden from users.
+
+# Step 4 - Create a virtual host
+
+1. _First, I created a document directory for the new website i am about to create near the default web dir (/var/www/html).
+2.  ` sudo mkdir /var/www/my_project_lamp `
+3.  Assign the ownership of the directory to the current user in the session
+4.  `sudo chown -R $USER:$USER /var/www/my_project_lamp `
+5.  ![image](https://github.com/user-attachments/assets/11f25cd3-8be1-4741-b676-fce531945938)
+6.  i Created a configuration file for my new website
+7.  
