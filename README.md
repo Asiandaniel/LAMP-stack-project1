@@ -128,5 +128,43 @@ To verify the setup, we need to configure an Apache Virtual Host to store the we
 3.  Assign the ownership of the directory to the current user in the session
 4.  `sudo chown -R $USER:$USER /var/www/my_project_lamp `
 5.  ![image](https://github.com/user-attachments/assets/11f25cd3-8be1-4741-b676-fce531945938)
-6.  i Created a configuration file for my new website
-7.  
+6.  i created and open a new configuration file in the Apache's site available directory using my preferred command-line editor.  In this case i used vi then i typed the command bellow:
+7.  ` sudo vi /etc/apache2/sites-available/projectlamp.conf`
+8.  This created a new blank file. then i cliked on "i" to enter into the insert mode after which i pasted in the following code. This code serve as a bare-bone configuration
+9.  
+10.  `<VirtualHost *:80>
+ServerName projectlamp
+ServerAlias www.projectlamp
+ServerAdmin Webmaster@localhost
+DOcumentRoot var/www/projectlamp
+Errorlog   ${APACHE_LOG_DIR}/error.log
+CustomLog  ${APACHE_LOG_DIR}/access.log combined
+<VirtualHost>`
+
+12. ![image](https://github.com/user-attachments/assets/e55dc546-4411-44f1-b410-ed4d7ef4a36c)
+
+
+13.  then i use the ls command to show the new file in the sites available directory
+14.  `  sudo ls /etc/apache2/sites-available `
+15.  ![image](https://github.com/user-attachments/assets/edfae555-011b-47ef-8d63-9d16c5afbb29)
+16.  i enabled the new virtual host by by using a2ensite command
+17.  ` sudo a2ensite projectlamp `
+18.  ![image](https://github.com/user-attachments/assets/6b50d4c4-6d9a-4659-a151-459d62955ce5)
+19.  i ran the following command to confirm that my apache  is properly working 
+`
+ sudo systemctl start apache2
+sudo systemctl status apache2
+`
+  
+21.  ![image](https://github.com/user-attachments/assets/46268f76-3abd-4f86-a547-897a56f94632)
+
+our new website is now active, but the web root/var/www/projectlamp is still empty. so i created an index.html file in that location  so that we can test that the virtual host works as expected  
+22.
+23.  `sudo echo 'Hello LAMP from hostname' $(TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"` && curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"` && curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
+`
+Now i went to my browser and try to open my website url usinbg the command below 
+` http://<public-ip-Adress>`
+![image](https://github.com/user-attachments/assets/dcfc74a0-3f7a-4d83-8cd6-15474160fdc9)
+
+
+
