@@ -1,0 +1,93 @@
+
+
+## What is Networking?
+
+Imagine you and your friends are passing notes to each other during lunch at school. Each time you pass a note, you're "communicating" just like computers do when they send information to each other. This is called networking—computers passing information, like messages, videos, or game data, over a network (the internet is the biggest network in the world!).
+
+When computers "talk" to each other, they use different ways (called protocols) to make sure the message gets through correctly. Two popular ways computers communicate are called TCP and UDP.
+
+---
+
+## What is TCP?
+
+### TCP = Reliable Delivery Guy
+
+Imagine you hired a delivery person to bring a very important package to your friend. You want to make sure:
+- The package arrives safely.
+- It doesn’t get lost.
+- Your friend gets exactly what you sent.
+
+This is exactly how TCP (Transmission Control Protocol) works:
+- TCP is like a super careful delivery person. It checks and double-checks that your message (or package) gets delivered perfectly.
+- It divides the message into smaller pieces, sends them one by one, and checks if each piece reaches its destination. If any piece gets lost, TCP resends it.
+- Once all pieces arrive, TCP puts them back together in the right order.
+
+### Example of TCP:
+If you’re loading a webpage or downloading a file, you want all the information to arrive correctly, right? You don’t want pieces of the page missing or your file to be broken! That’s where TCP comes in—it makes sure every part of the webpage or file is delivered safely.
+
+### How TCP Works:
+1. Handshaking: TCP starts by saying, “Hello, are you ready to receive?” The other computer says, “Yes, I’m ready.”
+2. Breaking It Down: TCP splits the information into small parts, called packets.
+3. Sending Packets: TCP sends these packets one by one and waits for a confirmation (like a “thumbs-up”) from the receiving computer that each packet arrived.
+4. Reordering: If the packets arrive out of order, TCP puts them back in the right order.
+5. Resending: If any packet gets lost along the way, TCP sends it again until it’s delivered correctly.
+
+---
+
+## What is UDP?
+
+### UDP = Fast Delivery Guy
+
+Now, imagine a different kind of delivery person. This person is super fast but not very careful. They just drop the package at the door and run off without waiting to see if it arrived safely. This is how UDP (User Datagram Protocol) works.
+
+- UDP is fast but doesn’t check if the message gets there safely or in the right order.
+- It sends the message and doesn’t wait for a confirmation from the other computer.
+- This makes it faster but also riskier because parts of the message might get lost, and UDP won’t know or care.
+
+### Example of UDP:
+UDP is great for things where speed is more important than perfection. For example:
+- Online gaming: You need the game to be fast! It’s okay if some tiny bits of data are missing because the game will keep running.
+- Live video streaming**: You want the video to keep playing smoothly, even if a few small pieces are missing.
+
+### How UDP Works:
+1. No Handshaking: UDP just starts sending data without asking, “Are you ready?”
+2. Sends Packets: UDP sends all the packets very fast, but it doesn’t check if they all arrive or if they’re in the right order.
+3. No Resending: If a packet gets lost, UDP won’t send it again.
+
+---
+
+## TCP vs. UDP: The Differences
+
+| TCP                                    | UDP                                |
+| -------------------------------------- | -------------------------------------- |
+| Like a careful delivery person         | Like a fast delivery person            |
+| Reliable: Makes sure every packet arrives | Fast: Doesn’t wait for confirmation      |
+| Slower, but ensures data is correct    | Faster, but some data might be lost    |
+| Used for websites, file downloads, and emails | Used for games, live video, and voice calls |
+
+---
+
+## When Do We Use TCP or UDP?
+
+1. TCP is used when it’s really important that all the data gets through correctly. For example:
+   - Loading a webpage
+   - Downloading files
+   - Sending emails
+
+2. UDP is used when speed is more important than perfect accuracy. For example:
+   - Playing online games
+   - Watching live videos
+   - Making voice calls
+
+---
+
+## Summary
+
+- TCP is like a careful delivery person who makes sure every part of your message arrives correctly, but it’s a little slower.
+- UDP is like a super fast delivery person who doesn’t check if everything arrived perfectly, but it’s quicker and works for things like games or live streams.
+  
+Both TCP and UDP are important for different situations, and they help computers communicate all over the world!
+
+---
+
+And that’s how TCP and UDP work—like two different types of delivery people helping your computer send and receive messages!

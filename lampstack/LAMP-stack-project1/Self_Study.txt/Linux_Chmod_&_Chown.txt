@@ -1,0 +1,95 @@
+
+## What is `chmod` and `chown` in Linux?
+
+When you use a computer, sometimes you want to share things with others, like pictures or files, and other times you want to keep things private, like your diary. On a Linux computer, `chmod` and `chown` are commands that help you decide who can see, change, or use your files. They let you control your "stuff" on the computer, just like how you might decide who can borrow your stuffs or look at your books during examination, thats on a lighther note.
+
+### 1. What is `chmod`?
+
+`chmod` stands for "change mode." It helps you decide what other people can do with your files and folders. Imagine you have a treasure chest (your file), and there are three kinds of keys people can have:
+
+1. Look at the treasure (Read): People can open the chest and look at what's inside.
+2. Use the treasure (Write): People can open the chest and change what's inside, maybe adding or removing things.
+3. Open the chest (Execute)**: People can run the file if it's a special file like a program (like running a toy train set).
+
+With `chmod`, you can give different people permission to look, use, or open your files. In Linux, we often think of three groups of people:
+
+- Owner: This is you! The person who owns the file or folder.
+- Group: This is your family or friends (a group of people you choose).
+- Others: This is everyone else (strangers).
+
+### Example of `chmod` :
+
+Let’s say you have a file called `secret_diary.txt`, and you don’t want anyone else to read or change it. You use .`chmod` to make it only readable and writable by you, the owner.
+
+Here’s how it works:
+- Read (r): Let someone look at the file.
+- Write (w): Let someone change the file.
+- Execute (x): Let someone open and run the file, if it’s a program.
+
+You can use numbers to give permissions:
+- 4 = Read (r)
+- 2 = Write (w)
+- 1 = Execute (x)
+- 0 = No permission
+
+Now, let's give you (the owner) full control and take away others’ permissions:
+```bash
+chmod 700 secret_diary.txt
+```
+- The first number 7 means you (the owner) can read, write, and execute (4 + 2 + 1).
+- The second number 0 means the group can’t do anything.
+- The third number 0 means others can’t do anything either.
+
+### 2. What is `chown`?
+
+`chown` stands for "change ownership." It's like writing your name on your stuffs or books so everyone knows they belong to you. But sometimes, you might want to give someone else ownership of a file or folder. `chown` lets you change who the owner of a file is and which group can access it.
+
+### Example of `chown`:
+
+Let’s say you have a picture called `fun_picture.jpg`, and you want to give it to your friend Alice. You can use the `chown` command to change the owner from you to Alice.
+
+Here’s how you do it:
+```bash
+chown alice fun_picture.jpg
+```
+Now, Alice owns the picture and can do whatever she wants with it.
+
+You can also change the group of a file. Let’s say you have a group of friends called `friends_group`. You can give the group permission to access the file too:
+```bash
+chown alice:friends_group fun_picture.jpg
+```
+Now, Alice is the owner, and your friends group can access the file too.
+
+---
+
+## How `chmod` and `chown` Work Together:
+
+Let’s say you have a folder of fun games, and you want to share it with your friends:
+
+1. First, you change the owner to your friend Alice using `chown`:
+   ```bash
+   chown alice games_folder
+   ```
+   Now Alice owns the folder.
+
+2. Then, you give the group permission to open and play the games using `chmod`:
+   ```bash
+   chmod 750 games_folder
+   ```
+   - 7 means Alice (the owner) can read, write, and open the files.
+   - 5 means your friends group can only read and open the files, but not change them.
+   - 0 means everyone else can’t do anything.
+
+---
+
+## Why `chmod` and `chown` Are Important:
+
+Just like you wouldn’t want strangers to walk into your room and mess with your stuff, you don’t want random people to mess with your files on a computer. `chmod` and `chown` help you control who can look at and change your things, keeping them safe and shared only with people you trust.
+
+---
+
+So, in simple terms:
+- `chmod` helps you decide what others can do with your files (look, change, or run).
+- `chown` lets you change who owns the file or folder and which group can access it.
+
+And that’s how `chmod` and `chown` work in Linux!

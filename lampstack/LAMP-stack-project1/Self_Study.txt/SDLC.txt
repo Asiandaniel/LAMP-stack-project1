@@ -1,0 +1,112 @@
+
+
+## What is the Software Development Life Cycle (SDLC)?
+
+Imagine you're building a LEGO house. You can’t just start putting bricks together randomly. First, you need a plan, then you start building, check if everything looks good, and finally, show it to your friends. This step-by-step way of doing things is called a cycle.
+
+In the world of computers, when people make software (like games, apps, or websites), they also follow steps, just like building a LEGO house. This process is called the Software Development Life Cycle, or SDLC. It’s a series of steps that help computer programmers make sure the software works well and does what it’s supposed to do.
+
+### Why Do We Use SDLC?
+
+SDLC helps developers:
+- Plan what to build.
+- Build the software the right way.
+- Test to make sure everything works.
+- Fix problems before showing it to everyone.
+- Update it when necessary.
+
+### The 6 Main Steps of SDLC
+
+1. Planning: Deciding What to Build
+2. Designing: Creating the Blueprint
+3. Building: Coding (Putting the Bricks Together)
+4. Testing: Checking for Problems
+5. Deploying: Showing It to the World
+6. Maintaining: Keeping It Working and Updated
+
+Let’s break these steps down!
+
+---
+
+### 1. Planning: Deciding What to Build
+
+Before you start building a house, you need to decide what kind of house you want. Is it small or big? Does it have a garden or a garage? The Planning step is like that for software. 
+
+- The developers talk to the people who will use the software (like a game or app) to understand what they want.
+- They also make sure the software is possible to create with the time and tools they have.
+
+#### Example:
+If you were making a game, you’d decide what the game should look like, who the characters are, and how the game will be played.
+
+---
+
+### 2. Designing: Creating the Blueprint
+
+After planning, it's time to draw up the blueprint, like an architect drawing the plan of the house. 
+
+- Designing in software means making a plan for how the software will look and work.
+- Developers decide how the software will be built and what tools they’ll need.
+
+#### Example:
+For a game, this would mean deciding what the main screen will look like, where the buttons will go, and how the levels will work.
+
+---
+
+### 3. Building: Coding (Putting the Bricks Together)
+
+Now that you have a blueprint, it’s time to build! 
+
+- In this step, programmers start coding (writing instructions) to create the software.
+- Coding is like putting the LEGO pieces together based on the design you made.
+
+#### Example:
+For your game, this is where the developers write code to make the characters move, the enemies attack, and the points get counted.
+
+---
+
+### 4. Testing: Checking for Problems
+
+After the software (or game) is built, you need to **test** it to make sure it works well, like checking if your LEGO house is sturdy. 
+
+- Developers run tests to see if there are any problems or “bugs” in the software.
+- If they find any issues, they go back and fix them.
+
+#### Example:
+In your game, this step would involve playing through it to see if all the levels work, if the character jumps correctly, and if the game doesn’t crash.
+
+---
+
+### 5. Deploying: Showing It to the World
+
+Once everything is working well, it’s time to deploy the software, which means making it available for everyone to use, like showing off your LEGO house to your friends. 
+
+- The software is launched and shared with users (people who will play the game, use the app, etc.).
+  
+#### Example:
+For your game, this means putting it on the internet or in the app store so people can download and play it.
+
+---
+
+### 6. Maintaining: Keeping It Working and Updated
+
+Even after the software is released, it still needs maintenance, like fixing broken parts of your LEGO house or adding new rooms.
+
+- Developers keep checking for any problems that users might face and release updates to fix them.
+- They might also add new features over time.
+
+#### Example:
+For your game, if people report that the game is crashing on certain levels, the developers will fix it and send out a new version. They might also add new characters or levels later.
+
+---
+
+## Why is SDLC Important?
+
+The Software Development Life Cycle is important because it helps developers stay organized and make sure the software they create is good, reliable, and fun to use. By following each step, they can avoid mistakes and fix problems before the software reaches the users.
+
+---
+
+## Summary
+
+- **SDLC** is the step-by-step process of making software.
+- It helps developers plan, design, build, test, deploy**, and maintain the software so that it works perfectly.
+- Just like building a LEGO house, software needs a blueprint, careful building, and constant checking to make sure everything is perfect!
